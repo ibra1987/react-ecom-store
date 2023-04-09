@@ -4,8 +4,8 @@
 
 ## Tech Stack
 
-*React
-*React Query
-*Vite
-*tailwindcss
-\*Products API: (https://dummyjson.com/)[https://dummyjson.com/]
++React
++React Query
++Vite
++tailwindcss
++Products API: [https://dummyjson.com/](https://dummyjson.com/)
