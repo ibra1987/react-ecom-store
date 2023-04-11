@@ -1,3 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Handlee&family=Lalezar&family=Poppins:wght@300;400&family=Rakkas&family=Roboto:wght@500&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.currentImage {
+  animation: slidein 1s ease-in-out;
+}
+
+@keyframes slidein {
+  from {
+    margin-bottom: -1000px;
+  }
+  to {
+    margin-bottom: 0px;
+  }
+}
+.sliderPopUp {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute;
+  z-index: 20;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 5px;
+
+  animation: sliderPopUp 1s ease-in-out;
+}
+@keyframes sliderPopUp {
+  from {
+    margin-right: -1000px;
+  }
+  to {
+    margin-right: 0px;
+  }
+}
+.slideOutPopUp {
+  animation: slideOutPopUp 1.5s ease-in-out forwards;
+  width: 30%;
+
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute;
+  background-color: white;
+  z-index: 20;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 5px;
+  top: 10vh;
+  right: 20px;
+}
+@keyframes slideOutPopUp {
+  from {
+    margin-right: 0px;
+  }
+  to {
+    margin-right: -1000px;
+  }
+}

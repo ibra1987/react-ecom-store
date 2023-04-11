@@ -12,13 +12,20 @@ export type Product = {
   images: string[];
 };
 
-export type item = {
+export type Item = {
   product: Product;
   quantity: number;
 };
 export type appStateType = {
   products: Product[];
-  cart?: item[];
+  categories: Category[];
+  cart: Item[];
+  currentProducts?: Product[] | [];
+  showCartDetails: boolean;
   setProducts: (p: Product[]) => void;
-  setCart: (i: item[]) => void;
+  setCart: (i: Item[]) => void;
+  setCategories: (c: Category[]) => void;
+  setShowCartDetails: () => void;
 };
+
+export type Category = string;

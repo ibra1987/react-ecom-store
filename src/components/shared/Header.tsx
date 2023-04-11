@@ -1,4 +1,4 @@
-import Cart from "./Cart";
+import Cart from "../products/Cart";
 import Navbar from "./Navbar";
 import SiteIdentity from "./SiteIdentity";
 const Header = () => {

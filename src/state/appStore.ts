@@ -1,21 +1,29 @@
 import { create } from "zustand";
-import { Product } from "../types";
-import { item } from "../types";
-import { appStateType } from "../types";
-import { stat } from "fs";
+import { Item, appStateType, Product, Category } from "../types";
 
-const useAppStore = create<appStateType>((set) => ({
+const useAppStore = create<appStateType>((set, get) => ({
   products: [],
+  categories: [],
   cart: [],
+  showCartDetails: false,
 
   setProducts: (payload: Product[]) =>
     set((state: { products: Product[] }) => ({
       products: [...state.products, ...payload],
     })),
 
-  setCart: (i: item[]) =>
+  setCategories: (payload: Category[]) =>
+    set((state) => ({
+      categories: payload,
+    })),
+
+  setCart: (i: Item[]) =>
     set((state) => ({
       cart: i,
+    })),
+  setShowCartDetails: () =>
+    set((state) => ({
+      showCartDetails: !state.showCartDetails,
     })),
 }));
 
